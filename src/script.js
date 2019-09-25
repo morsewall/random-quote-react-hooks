@@ -98,7 +98,7 @@ const quotes = [
   }
 ];
 
-//defining the stateful component.
+//defining the function component.
 const App = () => {
   const [quote, setQuote] = React.useState("");
 
