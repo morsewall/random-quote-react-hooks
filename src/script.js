@@ -114,7 +114,6 @@ const App = () => {
   const chosenRandomQuoteToState = () => {
     //selecting a random quote from the array
     let chosenQuote = randomQuoteFunction(quotes);
-    // console.log(chosenQuote);
     setQuote(chosenQuote);
   };
 
