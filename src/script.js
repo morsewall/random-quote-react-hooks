@@ -100,6 +100,7 @@ const quotes = [
 
 //defining the function component.
 const App = () => {
+  //using a function to lazy initialize the initial state
   const [quote, setQuote] = React.useState(() => {
     return quotes[Math.floor(Math.random() * quotes.length)];
   });
