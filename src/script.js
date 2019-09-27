@@ -100,7 +100,9 @@ const quotes = [
 
 //defining the function component.
 const App = () => {
-  const [quote, setQuote] = React.useState("");
+  const [quote, setQuote] = React.useState(() => {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  });
 
   const random = array => {
     return Math.floor(Math.random() * array.length);
@@ -116,10 +118,6 @@ const App = () => {
     let chosenQuote = randomQuoteFunction(quotes);
     setQuote(chosenQuote);
   };
-
-  React.useEffect(() => {
-    chosenRandomQuoteToState();
-  }, []);
 
   //making the machine tweet
   let twitterLink;
